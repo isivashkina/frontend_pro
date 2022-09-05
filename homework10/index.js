@@ -5,11 +5,10 @@ const products = [
     ['grape', 18]
 ]
 
-console.log(
-    getPrice(products),
-    getPrice(products, summerValue),
-    getPrice(products, winterValue)
-);
+console.log('Sum of Products', getPrice(products));
+console.log('Sum of Products Summer', getPrice(products, summerValue));
+console.log('Sum of Products Winter', getPrice(products, winterValue));
+
 
 function getPrice(products, seasonFunc) {
     let sumProduct = 0;
