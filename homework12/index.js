@@ -39,11 +39,9 @@ const fruits = [
 
 const Product = {
     getPrice() {
-        if (this.season){
-            return (this.price * this.seasonKoef).toFixed(2);
-        } else {
-            return this.price.toFixed(2);
-        }
+        return this.season 
+            ? (this.price * this.seasonKoef).toFixed(2)
+            : this.price.toFixed(2)
     },
     getInfo() {
         return `Product:${this.icon} ${this.name}.Type:${this.type}. Price:$${this.getPrice()}`;
@@ -54,12 +52,9 @@ const Vegetable = Object.create(Product);
 Vegetable.type = `Vegetable`;
 Vegetable.seasonKoef = 1.3;
 
-
 const Fruit = Object.create(Product);
 Fruit.type = `Fruit`;
 Fruit.seasonKoef = 2;
-
-console.log(Vegetable);
 
 function makePrototype(arr,objectProto){
     let arrPrototype = arr.map(item => {
@@ -68,16 +63,14 @@ function makePrototype(arr,objectProto){
        
     })
     return arrPrototype;
-    
-   
 }
 
-
 function renderList(arr){
-    return arr.forEach(item => {
-        console.log(item);
-        document.write(`<ul><li>${item.getInfo()}</li></ul>`)
+    document.write(`<ul>`);
+    arr.forEach(item => {
+        document.write(`<li>${item.getInfo()}</li>`)
     });
+    document.write(`</ul>`);
 }
 
 renderList(makePrototype(vegetables, Vegetable));
