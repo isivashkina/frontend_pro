@@ -1,12 +1,13 @@
 class Bulka {
     constructor(name,size,ingredients){
-    this.name = name;
-    this.size = size;
-    this.ingredients = [`cutlet`, `salada`, `tomato`];
+        this.name = name;
+        this.size = size;
+        this.ingredients = [`cutlet`, `salada`, `tomato`];
     }
+
     setAdditionalIngredients(...ingredient){
         this.ingredients.push(...ingredient);
-        } 
+    } 
 }
 
 let Humburger = new Bulka(`Humburger`, `small`);
