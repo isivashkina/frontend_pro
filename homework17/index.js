@@ -2,7 +2,6 @@ const renderElement = document.querySelector(`#renderElement`);
 const figure = document.querySelector(`#figure`);
 const color = document.querySelector(`#color`);
 const element = document.querySelector(`#element`);
-console.log(figure.value);
 
 let render = {
     figure: ``,
