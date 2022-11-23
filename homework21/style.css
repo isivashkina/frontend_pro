@@ -1,0 +1,34 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0
+}
+.container{
+    max-width: 1000px;
+    position: relative;
+     margin: auto;
+}
+.tesla {
+    width: 100%;
+}
+.text {
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+.btn {
+    cursor: pointer;
+    height: 35px;
+    width: 25px;
+    margin: 1px 2px;
+    border: 0px solid;
+    display: inline-block;
+    transition: box-shadow 0.6s ease;
+}
+
+.color-btn {
+    margin: 0px 10px 30px 10px;
+    text-align: center;
+}
